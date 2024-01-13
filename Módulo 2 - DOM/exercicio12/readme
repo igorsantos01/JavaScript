@@ -1,0 +1,10 @@
+  <label for="">Nome da Tecnologia: </label>
+      <input type="text" /><br />
+      <input type="radio" name="" id="" />
+      <label for="">0-2 anos</label>
+      <input type="radio" name="" id="" />
+      <label for="">3-4 anos</label>
+      <input type="radio" name="" id="" />
+      <label for="">5+ anos</label><br />
+      <button>Cadastrar</button>
+    </form>

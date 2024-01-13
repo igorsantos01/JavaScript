@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Saira+Extra+Condensed:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <main data-theme="dark">
+      <header>
+        <h1>Tic Tac Toe</h1>
+        <input type="text" class="name" id="name1" placeholder="Jogador 1" />
+        <input type="text" class="name" id="name2" placeholder="Jogador 2" />
+        <button id="start">Iniciar</button>
+      </header>
+
+      <div id="selector">
+        <label class="player" id="player1">Jogador 1</label>
+        <input type="checkbox" id="chk" disabled />
+        <label for="chk" class="switch">
+          <span class="slider">X</span>
+        </label>
+        <label class="player" id="player2">Jogador 2</label>
+      </div>
+
+      <section id="tic-tac-toe">
+        <div id="position">
+          <div class="box" id="p1"></div>
+          <div class="box" id="p2"></div>
+          <div class="box" id="p3"></div>
+          <div class="box" id="p4"></div>
+          <div class="box" id="p5"></div>
+          <div class="box" id="p6"></div>
+          <div class="box" id="p7"></div>
+          <div class="box" id="p8"></div>
+          <div class="box" id="p9"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

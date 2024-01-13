@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+:root {
+  --dark-color: #bbbbbb;
+  --dark-bg: #0f0f0f;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-bg);
+  color: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+.name {
+  background-color: var(--dark-color);
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 0.35em;
+  height: 2em;
+  width: 6.7em;
+  margin-bottom: 0.2em;
+  padding-left: 0.5em;
+  font-family: "Roboto", sans-serif;
+}
+.name::placeholder {
+  color: var(--dark-bg);
+  font-family: "Oswald", sans-serif;
+}
+button {
+  margin-top: 0.2em;
+  width: 3.5em;
+  height: 2em;
+  background-color: #9c0202;
+  color: var(--dark-color);
+  border: none;
+  border-radius: 0.7em;
+  font-size: 1em;
+}
+button:hover {
+  transition: 95ms;
+  background-color: #5a1010;
+}
+#tic-tac-toe {
+  color: #0f0f0f;
+  background-color: #868585;
+  width: 45vh;
+  height: 45vh;
+  padding-bottom: 1.5em;
+  border-radius: 0.9em;
+  font-family: "Oswald", sans-serif;
+}
+#position {
+  margin-top: 0.38em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3.87em;
+  justify-content: space-between;
+}
+.box {
+  text-align: center;
+  height: 1.54em;
+  width: 1.55em;
+}
+#chk {
+  display: none;
+}
+.switch {
+  position: relative;
+  background-color: var(--dark-color);
+  width: 3em;
+  height: 1.5em;
+  border-radius: 40px;
+  display: flex;
+  align-items: start;
+  padding: 0.2em;
+  transition: all 0.4s ease-in-out;
+  cursor: not-allowed;
+}
+#p1,
+#p2,
+#p4,
+#p5,
+#p7,
+#p8 {
+  border-right: #9c0202 3px solid;
+}
+#p1,
+#p2,
+#p3,
+#p4,
+#p5,
+#p6 {
+  border-bottom: #9c0202 3px solid;
+}
+.slider {
+  z-index: 1;
+  position: absolute;
+  background-color: var(--dark-bg);
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.4s ease-in-out;
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+#chk:checked ~ .switch .slider {
+  transform: translateX(1.5em);
+}
+#selector {
+  width: 28%;
+  display: flex;
+  justify-content: space-between;
+}
+.player {
+  font-family: "Roboto", sans-serif;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
