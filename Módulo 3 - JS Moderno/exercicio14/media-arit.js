@@ -1,32 +1,19 @@
-document.querySelector("#media-arit").addEventListener("click", () => {
-  console.clear();
-  const lengthArray = Number(
-    prompt("Deseja gerar a média de quantos números?")
+const createNumbers = () => {
+  const index = Number(
+    prompt("Deseja criar um array de quantos números aleatórios?")
   );
-  const numbers = randomNumbers(lengthArray);
-});
-
-const randomNumbers = (lengthArray) => {
-  let numbers = [];
-  while (numbers.length !== lengthArray) {
+  const numbers = new Array();
+  while (numbers.length !== index) {
     numbers.push(Math.floor(Math.random() * 9));
   }
-  const sumNumbers = sum(...numbers);
-  const mediaArit = mediaCalc(sumNumbers, lengthArray);
-  console.log(
-    `A média aritmética dos números: ${numbers} é igual a ${mediaArit}`
-  );
+  console.log(numbers);
+  return numbers;
 };
 
-const sum = (...numbers) => {
-  let sumNumbers = 0;
-  numbers.forEach((number) => {
-    sumNumbers += number;
-  });
-  return sumNumbers;
-};
+const arithmeticAverage = (...numbers) =>
+  numbers.reduce((initial, next) => initial + next) / numbers.length;
 
-const mediaCalc = (sumNumbers, lengthArray) => {
-  let media = sumNumbers / lengthArray;
-  return media.toFixed(1);
-};
+document.querySelector("#media-arit").addEventListener("click", () => {
+  console.clear();
+  console.log(arithmeticAverage(...createNumbers()));
+});
