@@ -15,5 +15,5 @@ document.querySelector("#media-pond").addEventListener("click", () => {
   ];
 
   console.clear();
-  console.log(weightedArithmeticMean(...numbers));
+  console.log(numbers, weightedArithmeticMean(...numbers));
 });
