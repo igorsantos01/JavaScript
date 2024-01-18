@@ -1,7 +1,10 @@
 const weightedArithmeticMean = (...numbers) => {
   return (
     numbers
-      .map((number) => number.n * number.w)
+      .map((number) => {
+        const { n, w } = number;
+        return n * w;
+      })
       .reduce((initial, next) => initial + next) /
     numbers.map((number) => number.w).reduce((initial, next) => initial + next)
   );
