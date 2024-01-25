@@ -8,7 +8,7 @@ const person = {
 const displayBirthday = ({ dateOfBirth }) => {
   const { name } = person;
   const birth = dayjs(dateOfBirth);
-  const age = dayjs().diff(birth, "year") + 1;
+  const age = dayjs().diff(birth, "year");
   const nextBirth = birth.add(age, "year").format("DD / MM / YYYY");
   console.log(`${name} fará ${age} anos no dia ${nextBirth}`);
 };
