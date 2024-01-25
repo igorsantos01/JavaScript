@@ -7,10 +7,18 @@ const person = {
 
 const displayBirthday = ({ dateOfBirth }) => {
   const { name } = person;
+  const today = dayjs();
+
   const birth = dayjs(dateOfBirth);
-  const age = dayjs().diff(birth, "year");
-  const nextBirth = birth.add(age, "year").format("DD / MM / YYYY");
-  console.log(`${name} fará ${age} anos no dia ${nextBirth}`);
+  const age = today.diff(birth, "year");
+  const nextBirth = birth.add(age + 1, "year");
+  const daysOfNextBirth = nextBirth.diff(today, "day");
+
+  console.log(
+    `${name} tem ${age} anos e fará ${age + 1} no dia ${nextBirth.format(
+      "DD / MM / YYYY"
+    )}. Faltam ${daysOfNextBirth} dias.`
+  );
 };
 
 displayBirthday(person);
